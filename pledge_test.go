@@ -118,6 +118,7 @@ func setup() {
 		Bytes: privateKeyBytes,
 	}
 	privatePem, _ := os.Create("private.pem")
+	// nolint
 	pem.Encode(privatePem, privateKeyBlock)
 
 	// dump public key to file
@@ -127,6 +128,7 @@ func setup() {
 		Bytes: publicKeyBytes,
 	}
 	publicPem, _ := os.Create("public.pem")
+	// nolint
 	pem.Encode(publicPem, publicKeyBlock)
 
 	SetConfig(&Config{

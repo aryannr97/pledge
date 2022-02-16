@@ -9,9 +9,9 @@ import (
 func main() {
 	log.SetFlags(log.LstdFlags | log.Lshortfile)
 	plg, err := pledge.New(pledge.AuthMethodJWT, true, &pledge.Config{
-		Issuer:         "Scratch Cred Securities",
-		PublicKeyPath:  "/home/rnrupnar/scratch/creds/dev/public.pem",
-		PrivateKeyPath: "/home/rnrupnar/scratch/creds/dev/private.pem",
+		Issuer:         "<Issuer Org>",
+		PublicKeyPath:  "<path_to_key>",
+		PrivateKeyPath: "<path_to_key>",
 	})
 	if err != nil {
 		log.Println(err)
@@ -19,9 +19,8 @@ func main() {
 	}
 
 	t, _ := plg.GenerateIdentitiy(map[string]interface{}{
-		"userid": "guid",
 		"name":   "peter",
-		"email":  "p@example",
+		"email":  "peter@example",
 	})
 	log.Printf("Generated token: %v", t)
 }
