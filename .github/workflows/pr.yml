@@ -1,14 +1,10 @@
-name: Development
+name: PR
 
 on:
   pull_request:
     branches: [ main ]
-  push:
-    branches: [*]
-    if: inside_open_pr
 
 jobs:
-
   build:
     runs-on: ubuntu-latest
     steps:
@@ -21,8 +17,8 @@ jobs:
     
     - name: Set up linter
       uses: golangci/golangci-lint-action@v2
-        with:
-          version: latest
+      with:
+        version: latest
 
     - name: Lint
       run: make lint
