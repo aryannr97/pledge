@@ -39,4 +39,5 @@ jobs:
       uses: docker://antonyurchenko/git-release:latest
       env:
         GITHUB_TOKEN: ${{ secrets.Release-CI }}
+        RELEASE_NAME_PREFIX: "v"
 
