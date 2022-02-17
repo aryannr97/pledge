@@ -31,6 +31,7 @@ jobs:
       run: make build
 
   release:  
+    needs: [build]
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v2
@@ -38,6 +39,6 @@ jobs:
     - name: Release
       uses: docker://antonyurchenko/git-release:latest
       env:
-        GITHUB_TOKEN: ${{ secrets.Release-CI }}
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         RELEASE_NAME_PREFIX: "v"
 
