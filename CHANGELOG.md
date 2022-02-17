@@ -11,3 +11,4 @@ All notable changes to pledge will be documented in this file.
 - Github workflows
 
 ### Changed
+- Release workflow
