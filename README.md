@@ -1,4 +1,5 @@
-# pledge
+# :closed_lock_with_key: pledge [![RELEASE](https://github.com/aryannr97/pledge/actions/workflows/release.yml/badge.svg)](https://github.com/aryannr97/pledge/actions/workflows/release.yml)
+
 SDK to provide different types of standard authentication &amp; authorization capabilities
 
 ## Supported standards
